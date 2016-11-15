@@ -46,3 +46,12 @@
   top: 100%;
   left: 0;
 }  
+
+#logoHolder {
+  position:absolute;
+  z-index: 0;
+  top: 0px;
+  left: 2px;
+  border: 0px solid rgba(0,0,0, 1);
+  background-color: none;
+}
