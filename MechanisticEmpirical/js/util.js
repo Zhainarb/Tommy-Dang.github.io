@@ -6,6 +6,11 @@
  * OF THIS SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
  */
 
+function toggleTable() {
+  var lTable = document.getElementById("analysisTable");
+  lTable.style.display = (lTable.style.display == "table") ? "none" : "table";
+}
+
 function tableCreate() {
   // Set readonlye for imputs
   document.getElementById("F13").readOnly = true;
@@ -15,13 +20,14 @@ function tableCreate() {
   document.getElementById("F17").readOnly = true;
   document.getElementById("F19").readOnly = true;
 
-  document.getElementById("F7").readOnly = true;
-  document.getElementById("F8").readOnly = true;
+  //document.getElementById("F7").readOnly = true;
+  //document.getElementById("F8").readOnly = true;
 
   document.getElementById("C18").readOnly = true;
-  document.getElementById("C19").readOnly = true;
-  document.getElementById("C24").readOnly = true;
-  document.getElementById("C25").readOnly = true;
+  //document.getElementById("C19").readOnly = true;
+  
+  //document.getElementById("C24").readOnly = true;
+  //document.getElementById("C25").readOnly = true;
 
 
   // Compute color scale
@@ -49,13 +55,14 @@ function tableCreate() {
 
   
   // Final CRCP PERFORMANCE ****************************************************
-  var html = '<b>CRCP PERFORMANCE</b><br>' ;
+  var html = '<div id="div_CRCP_PERFORMANCE"><b>CRCP PERFORMANCE</b><br>' ;
   var r =  12 * document.getElementById("C18").value-1;
   var color = colorGreenRed(rows[r][12]);
   html += 'Number of Punchouts per Mile: ' ;      
   html += '<INPUT TYPE="TEXT" readonly="readonly" style="background-color:'+color
           +'; text-align: center; font-size: 17; font-weight: bold;" value="'+parseFloat(rows[r][12]).toFixed(2)+'" size="7"><br><br>';
-
+  html += '</div>' ;      
+          
   var titles = ["Age (Month)","Age (Year)", "Modulus of Rupture (psi)","Modulus of Elasticity (ksi)"
     ,"Concrete Stress (T) (psi)"
     ,"Concrete Stress (E) (psi)"
@@ -68,8 +75,14 @@ function tableCreate() {
     ,"Number of Punchouts per Mile"]
 
 
-  html += '<b>Analysis Result</b>' ;
-  html += '<table style="width:99%;font-size: 12px;" border="1">'; 
+  //html += '<b>Analysis Result</b>' ;
+  //html += '<a id="loginLink" onclick="toggleTable(true);" href="#">Login</a>';
+  
+  html += '<div id="divCheckbox1"> <input type="checkbox" id="checkbox1" onclick="toggleTable()">';
+  html += '<label for="checkbox1" > Analysis Result </label> </div>'
+
+
+  html += '<table style="width:99%;font-size: 12px; display:none" border="1"  id="analysisTable">'; 
 
 
 
@@ -115,7 +128,7 @@ function tableCreate() {
     }
     html+='</tr>';       
   }
-  html += '</table> <br>';
+  html += '</table>';
 
   $('#analysisContainer').append(html);
   

@@ -36,9 +36,21 @@
 
       <br>
       <b> B. Design Parameters </b>
-      <TABLE style="width:290px;margin-left: 20px">
-        <TR><TD> Design Life (year) </TD> <TD><INPUT TYPE="TEXT" id="C18" value="30" size="4"></TD></TR>
-        <TR><TD> Number of Punchouts per Mile </TD> <TD><INPUT TYPE="TEXT" id="C19" value="10" size="4"></TD></TR>
+      <TABLE style="width:330px;margin-left: 20px">
+        <TR><TD> Design Life (year) </TD> <TD>
+            <!--<INPUT TYPE="TEXT" id="C18" value="30" size="4">-->
+
+            <input type="range" id="C18" min="1" max="100" value="30" step="1" oninput="updateGraph(this)">
+            <span id="rangeC18">30</span>
+              
+            </TD></TR>
+        <TR><TD> Punchouts per Mile </TD> <TD>
+            <!--<INPUT TYPE="TEXT" id="C19" value="10" size="4">-->
+
+            <input type="range" id="C19" min="1" max="100" value="10" step="1" oninput="updateGraph(this)">
+            <span id="rangeC19">10</span>
+
+            </TD></TR>
       </TABLE>
 
       <br><br><br>
@@ -50,16 +62,39 @@
   </div>
   <div id="right">
       <b> C. Design Traffic </b>
-      <TABLE style="width:430px;margin-left: 20px">
-        <TR><TD> Total Number of Lanes in One Direction </TD> <TD><INPUT TYPE="TEXT" id="C24" value="2" size="4"></TD></TR>
-        <TR><TD> Total Design Traffic in One Direction (million ESALs) </TD> <TD><INPUT TYPE="TEXT" id="C25" value="100" size="4"></TD></TR>
+      <TABLE style="width:566px;margin-left: 20px">
+        <TR><TD> Total Number of Lanes in One Direction </TD> <TD>
+            <!--<INPUT TYPE="TEXT" id="C24" value="2" size="4">-->
+
+            <input type="range" id="C24" min="1" max="10" value="2" step="1" oninput="updateGraph(this)">
+            <span id="rangeC24">2</span>
+
+            </TD></TR>
+        <TR><TD> Total Design Traffic in One Direction (million ESALs) </TD> <TD>
+            <!--<INPUT TYPE="TEXT" id="C25" value="100" size="4"> -->
+            
+            <input type="range" id="C25" min="10" max="1000" value="100" step="1" oninput="updateGraph(this)">
+            <span id="rangeC25">100</span>
+
+            </TD></TR>
       </TABLE>
 
       <br>
       <b>  D. Concrete Layer Information </b>
-      <TABLE style="width:306px;margin-left: 20px">
-        <TR><TD>  Thickness of Concrete Layer (in.) </TD> <TD><INPUT TYPE="TEXT" id="F7" value="14" size="4"></TD></TR>
-        <TR><TD> 28-Day Modulus of Rupture (psi) </TD> <TD><INPUT TYPE="TEXT" id="F8" value="570" size="4"></TD></TR>
+      <TABLE style="width:430px;margin-left: 20px">
+        <TR>
+          <TD>  Thickness of Concrete Layer (in.) </TD> <TD>
+            <!--<INPUT TYPE="TEXT" id="F7" value="14" size="4">-->
+            <input type="range" id="F7" min="2" max="16" value="14" step="1" oninput="updateGraph(this)">
+            <span id="rangeF7">14</span>
+
+          </TD></TR>
+        <TR><TD> 28-Day Modulus of Rupture (psi) </TD> <TD>
+          <!--<INPUT TYPE="TEXT" id="F8" value="570" size="4">-->
+          <input type="range" id="F8" min="1" max="1000" value="570" step="1" oninput="updateGraph(this)">
+            <span id="rangeF8">570</span>
+
+        </TD></TR>
       </TABLE>
       <br>
       <b>  E. Support Layers Information </b>
@@ -75,11 +110,12 @@
 </div>  
 <br>
 
+
 <g id="graphContainer">  </g> 
 <div id="analysisContainer">  </div> 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="lib/jquery.min.js"></script>
+<script src="lib/d3.v3.min.js"></script>
 <script src="lib/d3.tip.v0.6.3.js"></script>
 <script src="js/util.js"></script>
 <script src="js/main.js"></script>

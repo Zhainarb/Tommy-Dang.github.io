@@ -1,6 +1,26 @@
 
-.axis path,
-  .axis line{
+.xaxis path,
+  .xaxis line{
+    fill: none;
+    stroke: black;
+  }
+
+  .line{
+    fill: none;
+    stroke: #000;
+    stroke-width: 1px;
+  }
+
+  .tick text{
+    font-size: 12px;
+  }
+
+  .tick line{
+    opacity: 0.2;
+  }
+
+.yaxis path,
+  .yaxis line{
     fill: none;
     stroke: black;
   }
