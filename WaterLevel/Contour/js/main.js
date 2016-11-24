@@ -31,7 +31,7 @@ d3.tsv("data/ascii_2013.csv", function(error, data_) {
    }];
 
   var layout = {
-    title: 'Customizing Size and Range of Contours',
+    title: 'Water level Contours',
     width: 850,
     height: 1000,
   };
