@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  position: relative;
+}
+
+svg,
+canvas {
+  position: absolute;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  display: none;
+}
+
+</style>
+<body>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script>
+
+var width =  300,
+    height = 300;
+
+d3.json("heatmap.json", function(error, heatmap) {
+  if (error) throw error;
+
+  var dx = width,
+      dy = height;
+
+  // Fix the aspect ratio.
+  // var ka = dy / dx, kb = height / width;
+  // if (ka < kb) height = width * ka;
+  // else width = height / ka;
+
+  var x = d3.scale.linear()
+      .domain([0, dx])
+      .range([0, width]);
+
+  var y = d3.scale.linear()
+      .domain([0, dy])
+      .range([height, 0]);
+
+  var color = d3.scale.linear()
+      .domain([95, 115, 135, 155, 175, 195])
+      .range(["#0a0", "#6c0", "#ee0", "#eb4", "#eb9", "#fff"]);
+
+  var xAxis = d3.svg.axis()
+      .scale(x)
+      .orient("top")
+      .ticks(20);
+
+  var yAxis = d3.svg.axis()
+      .scale(y)
+      .orient("right");
+
+  d3.select("body").append("canvas")
+      .attr("width", dx)
+      .attr("height", dy)
+      .style("width", width + "px")
+      .style("height", height + "px")
+      .call(drawImage);
+
+  var svg = d3.select("body").append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis)
+      .call(removeZero);
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+      .call(removeZero);
+
+  // Compute the pixel colors; scaled by CSS.
+  function drawImage(canvas) {
+    var context = canvas.node().getContext("2d"),
+        image = context.createImageData(dx, dy);
+    
+    console.log("dx="+dx+" dy="+dy);
+        
+    for (var y = 0, p = 0; y < dy; y=y+1) {
+      for (var x = 0; x < dx; x=x+1) {
+
+        var c = d3.rgb(color(p/1000));
+       if (x!=5 || y!=5){
+          image.data[p] = c.r;
+          image.data[p+1] = c.g;
+          image.data[p+2] = c.b;
+          image.data[p+3] = 255;
+        }
+        p=p+4;
+        console.log("x="+x+" y="+y+" p="+p+" "+c);
+    
+      }
+    }
+
+    context.putImageData(image, 0, 0);
+  }
+
+  function removeZero(axis) {
+    axis.selectAll("g").filter(function(d) { return !d; }).remove();
+  }
+});
+
+</script>
