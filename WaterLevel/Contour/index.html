@@ -3,17 +3,19 @@
   <script src="lib/d3.tip.v0.6.3.js"></script>
   <script src="lib/jquery.min.js"></script>
   <script src="lib/plotly-latest.min.js"></script> 
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  	<div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
   
 
 <!-- GPS location-->
-  	<p>Click the button to get your coordinates.</p>
-		<button onclick="getLocation()">Try It</button>
+  	<p>Click the button to get your coordinates. <button onclick="getLocation()">Try It</button></p>
 	<p id="demo"></p>
+  
+  <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
+  
 
 	<script src="js/main.js"></script>
 	<script src="js/gps.js"></script>
