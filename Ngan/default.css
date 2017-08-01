@@ -1,0 +1,207 @@
+/*
+Template name: Twilight
+Template URI: http://templates.arcsin.se/twilight-website-template/
+Release date: 2006-11-21
+Description: A dark and mysterious single column template.
+Author: Viktor Persson
+Author URI: http://arcsin.se/
+
+This template is licensed under a Creative Commons Attribution 2.5 License:
+http://templates.arcsin.se/license/
+*/
+
+/* standard elements */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #CDB;
+	text-decoration: none;
+}
+
+a:hover {color: #22F;}
+
+body {
+	background: #000 url(./images/pattern.png) repeat;
+    color: #000;
+	font: normal 87% "Lucida Sans Unicode",sans-serif;
+    margin: 0;
+}
+
+p,code,ul {
+	font-size: 1.2em;
+	padding-bottom: 1.2em;
+}
+
+li {
+	list-style: url(img/li.gif);
+	margin-left: 30px;
+}
+
+
+code {
+	background: url(img/bgcode.gif);
+	border: 1px solid #060606;
+	color: #666;
+	display: block;
+	font: normal 1.1em "Lucida Sans Unicode",serif;
+	margin-bottom: 12px;
+	padding: 8px 10px;
+	white-space: pre;
+}
+
+blockquote {
+	background: url(img/quote.gif) no-repeat;
+	color: #664;
+	display: block;
+	font: normal 1.2em "Lucida Sans Unicode",serif;
+	padding-left: 28px;
+}
+
+
+h1 {
+    font-size: 1.8em;
+	margin-bottom: 2px;
+	color: #993;
+	padding-top: 10px;
+    padding-left: 360px;
+}
+
+h2 {
+    margin-bottom: 0px;
+	color: #000;
+	padding-top: 0px;
+    padding-left: 360px;
+    font: normal 1.2em "Lucida Sans Unicode",serif;
+}
+
+h3 {
+    font-size: 1.2em;
+	margin-bottom: 5px;
+	color: #000;
+	padding-top: 4px;
+	border-bottom: 1px dotted rgba(119, 119, 50, 0.6);
+}
+
+h4 {
+    font-size: 1.1em;
+	margin-bottom: 0px;
+	color: #000;
+	padding-top: 0px;
+}
+
+h5 {
+    font-size: 1em;
+	margin-bottom: 0px;
+	color: #000;
+	padding-top: 0px;
+    font: normal 1.2em "Lucida Sans Unicode",serif;
+}
+
+
+/* Tommy 2017*/
+.picSlide img{
+  height: 500px;
+  width: 750px;
+  border-width: 0px;
+  margin: auto;
+}
+
+
+
+.button {
+    background-color: #772;
+    border: 1px #666;
+    border-radius: 4px;
+    color: white;
+    padding: 0px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    cursor: pointer;
+    position:relative;
+    bottom:3px;
+}
+
+
+/* misc */
+.clearer {clear: both;}
+
+/* structure */
+.container {
+	margin: 0 auto;
+	width: 900px;
+}
+
+/* title */
+.title {
+	float: left;
+	margin-top: 5px;
+	text-align: center;
+	width: 220px;
+}
+.title h1 {
+	color: #CC3;
+	font: normal 2em "Lucida Sans Unicode",sans-serif;
+}
+.title h2 {
+	color: #665;
+	font: normal 1.1em "Lucida Sans Unicode",sans-serif;
+}
+
+/* navigation */
+.navigation {
+	height: 220px;
+	padding: 0 0 0 0px;
+}
+
+.navigation a {
+	background: #444;
+	border-left: 1px solid #666;	
+	color: #fff;
+	float: right;
+	font: bold 1.0em "Lucida Sans Unicode",sans-serif;
+	margin-top: 2px;
+	padding: 10px 20px 10px;
+	text-align: center;
+	text-decoration: none;
+}
+.navigation a:hover {
+	background: #444;
+	color: #88f;
+	padding: 12px 20px 15px;
+}
+
+
+/* holders */
+.holder {
+	padding: 15 15 15 15px;
+}
+
+
+.footer {
+	clear: both;
+	height: 0px;
+}
+
+
+/* footer */
+.footer {
+	border-bottom: 1px dotted rgba(119, 119, 50, 0.6);
+	background-position: left bottom;
+	color: #776;
+	font-size: 1.1em;
+	padding: 6px 25px 0;
+}
+.footer .right, .footer .right a {color: #443;}
+.footer .right a:hover {color: #665;}
+
+/* floats */
+.left {float: left;}
+.right {float: right;
+	font: normal 90% "Lucida Sans Unicode",sans-serif;
+	}
+.clearer {clear: both;}
