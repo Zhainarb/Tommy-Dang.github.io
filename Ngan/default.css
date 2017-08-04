@@ -17,7 +17,7 @@ http://templates.arcsin.se/license/
 }
 
 a {
-	color: #CDB;
+	color: #00a;
 	text-decoration: none;
 }
 
@@ -78,18 +78,18 @@ h2 {
 }
 
 h3 {
-    font-size: 1.2em;
+    font-size: 1.4em;
 	margin-bottom: 5px;
 	color: #000;
 	padding-top: 4px;
-	border-bottom: 1px dotted rgba(119, 119, 50, 0.6);
 }
 
 h4 {
-    font-size: 1.1em;
+    font-size: 1.2em;
 	margin-bottom: 0px;
 	color: #000;
 	padding-top: 0px;
+	border-bottom: 1px dotted rgba(0, 0, 0, 0.9);
 }
 
 h5 {
