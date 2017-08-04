@@ -21,7 +21,9 @@ a {
 	text-decoration: none;
 }
 
-a:hover {color: #22F;}
+a:hover {color: #22F;
+	text-decoration: underline;
+	}
 
 body {
 	background: #000 url(./images/pattern.png) repeat;
@@ -36,7 +38,6 @@ p,code,ul {
 }
 
 li {
-	list-style: url(img/li.gif);
 	margin-left: 30px;
 }
 
