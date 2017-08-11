@@ -80,14 +80,14 @@ h2 {
 }
 
 h3 {
-    font-size: 1.4em;
+    font-size: 1.6em;
 	margin-bottom: 5px;
 	color: #000;
 	padding-top: 4px;
 }
 
 h4 {
-    font-size: 1.2em;
+    font-size: 1.4em;
 	margin-bottom: 0px;
 	color: #000;
 	padding-top: 0px;
@@ -145,6 +145,14 @@ h5 {
 	text-align: center;
 	width: 220px;
 }
+
+.title img{
+	border: 1px solid #444;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px -2px #000;
+
+}
+
 .title h1 {
 	color: #CC3;
 	font: normal 2em "Lucida Sans Unicode",sans-serif;
