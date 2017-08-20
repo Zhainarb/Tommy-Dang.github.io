@@ -62,6 +62,32 @@ blockquote {
 	padding-left: 28px;
 }
 
+blink {
+    -webkit-animation: 1s linear infinite condemed_blink_effect; // for android
+    animation: 1s linear infinite condemed_blink_effect;
+}
+@-webkit-keyframes condemed_blink_effect { // for android
+    0% {
+        visibility: hidden;
+    }
+    20% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+@keyframes condemed_blink_effect {
+    0% {
+        visibility: hidden;
+    }
+    20% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
 
 h1 {
     font-size: 1.8em;
