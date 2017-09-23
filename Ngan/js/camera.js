@@ -269,6 +269,7 @@
 	});
 	
 	var amountSlide = allImg.length;
+	console.log("amountSlide="+amountSlide);
 
 	$(content).append('<div class="cameraContents" />');
 	var loopMove;
