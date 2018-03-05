@@ -1,0 +1,563 @@
+
+<!DOCTYPE html>
+<!-- Camera is a Pixedelic free jQuery slideshow | Manuel Masia (designer and developer) --> 
+<html> 
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" > 
+    <title>Camera | a free jQuery slideshow by Pixedelic</title> 
+    <meta name="description" content="Camera a free jQuery slideshow with many effects, transitions, adaptive layout, easy to customize, using canvas and mobile ready"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--///////////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //		Styles
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////////////--> 
+    <link rel='stylesheet' id='camera-css'  href='./css/camera.css' type='text/css' media='all'> 
+    <style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		a {
+			color: #09f;
+		}
+		a:hover {
+			text-decoration: none;
+		}
+		#back_to_camera {
+			clear: both;
+			display: block;
+			height: 80px;
+			line-height: 40px;
+			padding: 20px;
+		}
+		.fluid_container {
+			margin: 0 auto;
+			max-width: 1000px;
+			width: 750px;
+		}
+		.camera_thumbs{
+			display: none;
+		}
+        .cameraContents{
+            height: 560px;
+        }
+        ::-webkit-scrollbar {
+        display: none;
+        }
+        .camera_wrap div{
+            max-height: 560px;
+        }
+        .camera_wrap a{
+            color: #af0;
+        }
+        .camera_caption{
+            width: auto;
+        }
+	</style>
+
+    <!--///////////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //		Scripts
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////////////--> 
+    
+    <script type='text/javascript' src='./js/jquery.min.js'></script>
+    <script type='text/javascript' src='./js/jquery.mobile.customized.min.js'></script>
+    <script type='text/javascript' src='./js/jquery.easing.1.3.js'></script> 
+    <script type='text/javascript' src='./js/camera.js'></script> 
+    
+    <script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_3').camera({
+				height: '560px',
+				loader: 'bar',
+				pagination: false,
+				thumbnails: true,
+				imagePath: '../pics/',
+				time: 700
+			});
+
+		});
+	</script>
+ 
+</head>
+<body>
+    
+	<div class="fluid_container" style="width: 750px; height: 560px;">
+        <div class="camera_wrap camera_emboss" id="camera_wrap_3" style="height: 560px;">
+            <div data-src="pics/July2016/2016_DaNang.jpg">
+                <div class="camera_caption fadeFromLeft">
+                    <i>July 20, 2016</i>
+                    <br><b>Linh Ung temple</b>, Da Nang city
+                    <br> <font color="#0f0">The first picture taken together</font>
+                </div>
+            </div>
+
+            <div data-src="pics/July2016/QuangBinh.jpg">
+                <div class="camera_caption fadeFromLeft">
+                    <i>July 28, 2016</i>
+                    <br><b>Phong Nha-Kẻ Bàng National Park</b>, Quang Binh
+                </div>
+            </div>
+
+            <div data-src="pics/July2016/BaiLu.jpg">
+                <div class="camera_caption fadeFromLeft">
+                    <i>August 2, 2016</i>
+                    <br><a href="https://mytour.vn/location/4537-bai-lu-thien-duong-nghi-duong-o-bien-o-nghe-an.html">Bai Lu</a>, Nghe An
+                </div>
+            </div>
+
+             <div data-src="pics/July2016/Pleiku.jpg">
+                <div class="camera_caption fadeFromLeft">
+                    <i>August 13, 2016</i>
+                    <br><b>Pleiku city</b>, Gia Lai
+                    <br> <font color="#0f0">At Trà Cung Đình</font>
+                </div>
+            </div>
+
+             <div data-src="pics/July2016/TrungLuong4.jpg">
+                <div class="camera_caption fadeFromLeft">
+                    <i>August 15, 2016</i>
+                    <br><b>Qui Nhon city</b>, Binh Dinh
+                    <br> <a href="http://kenh14.vn/co-gi-o-khu-da-ngoai-trung-luong-diem-den-duoc-check-in-nhieu-nhat-binh-dinh-he-nay-20160611165729009.chn">At khu dã ngoại Biển Trung Lương</a>
+                </div>
+            </div>
+
+            <div data-src="pics/July2016/Picture9.png">
+                <div class="camera_caption fadeFromLeft">
+                    <i>August 17, 2016</i>
+                    <br><b>Qui Nhon city</b>, Binh Dinh
+                    <br> <font color="#0f0">Our relationship became serious, we want to be part of the other life</font>
+                </div>
+            </div>
+
+          <div data-src="./pics/June2017/IMG_2086.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>June 20, 2017</i>
+                    <br><b>Ha Noi city</b>
+                    <br> <font color="#0f0">At Chùa 1 cột, Ba Đình, Hà Nội</font>
+                </div>
+            </div>
+
+             <div data-src="./pics/June2017/IMG_2264.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>June 21, 2017</i>
+                    <br><b>Sapa</b>, Lao Cai
+                </div>
+            </div>
+
+            <div data-src="./pics/June2017/IMG_2395.JPG">
+              <div class="camera_caption fadeFromBottom">
+                    <i>June 21, 2017</i>
+                    <br><b>Sapa</b>, Lao Cai
+                     <br> <font color="#0f0">Fansipan</font>
+                </div>
+            </div>
+
+            <div data-src="./pics/June2017/IMG_2542.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>June 21, 2017</i>
+                    <br><b>Sapa</b>, Lao Cai
+                     <br> <font color="#0f0">Fansipan</font>
+                </div>
+            </div>
+            <div data-src="./pics/June2017/IMG_2764.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>June 22, 2017</i>
+                    <br><b>Sapa</b>, Lao Cai
+                     <br> <a href="https://sapa.dulichvietnam.com.vn/tin-tuc/62/len-ban-cat-cat-kham-pha-chon-binh-yen-cua-nguoi-hmong.html">Bản Cát Cát Sapa</a>
+                </div>
+            </div>
+            <div data-src="./pics/June2017/IMG_2806.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>June 22, 2017</i>
+                    <br><b>Sapa</b>, Lao Cai
+                     <br> <a href="https://sapa.dulichvietnam.com.vn/tin-tuc/62/len-ban-cat-cat-kham-pha-chon-binh-yen-cua-nguoi-hmong.html">Bản Cát Cát Sapa</a>
+                </div>
+            </div>
+            <div data-src="pics/June2017/IMG_3059.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>June 23, 2017</i>
+                    <br><b>Sapa</b>, Lao Cai
+                     <br> <a href="https://sapa.dulichvietnam.com.vn/tin-tuc/62/len-ban-cat-cat-kham-pha-chon-binh-yen-cua-nguoi-hmong.html">Cầu Mây, Xã Tả Van</a>
+                </div>
+            </div>
+
+             <div data-src="pics/June2017/IMG_3423.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>June 25, 2017</i>
+                    <br><b>Vinh city</b>, Nghe An
+                     <br> <font color="#0f0">Our official proposal at <a href="https://nhahangminhhong.com.vn "> Minh Hong restaurant</a></font>
+                </div>
+            </div>
+             <div data-src="pics/June2017/IMG_3463.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>June 26, 2017</i>
+                    <br><b>Dien Phong</b>, Dien Chau, Nghe An
+                     <br> <font color="#0f0">With Ngan's family</font>
+                </div>
+            </div>
+
+            <div data-src="pics/June2017/IMG_3552.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>June 27, 2017</i>
+                    <br><b>Cua Lo beach</b>, Nghe An
+                     <br> <font color="#0f0">Trip with Ngan's family</font>
+                </div>
+            </div>
+
+
+            <div data-src="pics/July2017/IMG_3631.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>July 1, 2017</i>
+                    <br><b> Ho Chi Minh city</b>
+                     <br> <font color="#0f0">Dinner with Tommy's dad at <a href="https://www.foody.vn/ho-chi-minh/buddha-chay-2">Buddha Chay restaurant</a></font>
+                </div>
+            </div>
+
+            <div data-src="pics/July2017/QuiNhon.png">
+                <div class="camera_caption fadeFromBottom">
+                    <i>July 4, 2017</i>
+                    <br><b> Qui Nhon city</b>, Binh Dinh
+                     <br> <font color="#0f0"> Tommy's hometown center</font>
+                </div>
+            </div>
+
+            <div data-src="pics/July2017/IMG_3796.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>July 9, 2017</i>
+                    <br><b> Ho Chi Minh city</b>
+                     <br> <font color="#0f0"> Tommy's house</font>
+                </div>
+            </div>
+
+            <div data-src="pics/July2017/IMG_3799.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>July 9, 2017</i>
+                    <br><b> Ho Chi Minh city</b>
+                     <br> <font color="#0f0"> <a href="http://damsenpark.com.vn/hoat-dong/su-kien/the-gioi-bang-gia-bang-dang-2017-dam-sen_eid13">Thế giới Băng Đăng</a> in Dam Sen park</font>
+                </div>
+            </div>
+
+            <div data-src="pics/July2017/IMG_3824.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>July 10, 2017</i>
+                    <br><b> Tan San Nhat airport</b>
+                     <br> <font color="#0f0"> Tommy returned to the U.S. after Ngan's interview</font>
+                </div>
+            </div>
+        
+            
+            <div data-src="docs/August2017/Ngan-Tommy-August_2.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>2am on August 2, 2017</i>
+                    <br><b> Tan San Nhat airport</b>
+                     <br> <font color="#0f0"> Ngan picked up Tommy on his return to Vietnam</font>
+                </div>
+            </div>
+            
+             <div data-src="pics/August2017/IMG_71172.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 5, 2017</i>
+                    <br>Flight to <b> Vinh city</b>, Nghe An
+                     <br> <font color="#0f0"> We came back to Ngan hometown for our engagement</font>
+                </div>
+            </div>
+
+            <div data-src="pics/Aug2017_sent/IMG_42522.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 7, 2017</i>
+                    <br><b> Hamlet 6</b>, Dien Phong, Dien Chau, Nghe An
+                     <br> <font color="#0f0"> Our formal engagement</font>
+                </div>
+            </div>
+
+            <div data-src="pics/Aug2017_sent/Engage2.png">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 7, 2017</i>
+                    <br><b> Hamlet 6</b>, Dien Phong, Dien Chau, Nghe An
+                     <br> <font color="#0f0"> Our formal engagement</font>
+                </div>
+            </div>
+
+            
+             <div data-src="pics/Aug2017_sent/IMG_40212.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 7, 2017</i>
+                    <br><b> Hamlet 6</b>, Dien Phong, Dien Chau, Nghe An
+                     <br> <font color="#0f0"> Our formal engagement</font>
+                </div>
+            </div>
+            <div data-src="pics/Aug2017_sent/IMG_4054.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 7, 2017</i>
+                    <br><b> Hamlet 6</b>, Dien Phong, Dien Chau, Nghe An
+                     <br> <font color="#0f0"> Our engagement night</font>
+                </div>
+            </div>
+            
+            <div data-src="pics/August2017_2/IMG_4213.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 8, 2017</i>
+                    <br><b> Kim Lien</b>, Nam Dan, Nghe An
+                     <br> <font color="#0f0"> Tommy's dad is coming back to Ho Chi Minh city </font>
+                </div>
+            </div>
+          
+            <div data-src="pics/August2017_2/IMG_4133.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 9, 2017</i>
+                    <br><b> Cua Lo beach</b>, Nghe An
+                     <br> <font color="#0f0"> Trip with Ngan's family </font>
+                </div>
+            </div>
+
+            <div data-src="pics/August2017/IMG_4250.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 10, 2017</i>
+                    <br><b> Hamlet 6</b>, Dien Phong, Dien Chau, Nghe An
+                     <br> <font color="#0f0"> Trộm mía </font>
+                </div>
+            </div>
+
+            <div data-src="pics/August2017/IMG_4277.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 11, 2017</i>
+                    <br><b> Hamlet 6</b>, Dien Phong, Dien Chau, Nghe An
+                     <br> <font color="#0f0"> Mò cua bắt ốc </font>
+                </div>
+            </div>
+             
+            <div data-src="pics/August2017/IMG_43042.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 12, 2017</i>
+                    <br><b> Vinh ariport</b>
+                     <br> <font color="#0f0"> Flew to Pleiku city, Gia Lai </font>
+                </div>
+            </div>
+            
+
+             <div data-src="pics/August2017/IMG_4325.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 13, 2017</i>
+                    <br><b> Pleiku city</b>
+                     <br> <a href="https://www.youtube.com/watch?v=ILLEBfxO-yU">Dong Xanh park</a>
+                </div>
+            </div>
+            
+            <div data-src="pics/August2017/IMG_3842.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 14, 2017</i>
+                    <br><b> Pleiku city</b>
+                     <br> <a href="https://www.facebook.com/pages/H%C3%B4%CC%80-%C4%90%C6%B0%CC%81c-An-Gia-Lai/294970200623883"> Hồ Duc An</a>
+                </div>
+            </div>
+
+            <div data-src="pics/August2017_2/IMG_45192.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 15, 2017</i>
+                    <br><b> Qui Nhon city</b>
+                     <br> <font color="#0f0"> Go swimming in Tommy's hometown</font>
+                </div>
+            </div>
+
+            <div data-src="pics/August2017_2/IMG_4531.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 19, 2017</i>
+                    <br><b> Ho Chi Minh city</b>
+                     <br> <font color="#0f0"> At <a href="https://www.foody.vn/ho-chi-minh/san-khau-trong-dong"> Sân Khấu Trống Đồng</a></font>
+                </div>
+            </div>
+
+             <div data-src="pics/August2017_2/IMG_4553.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 20, 2017</i>
+                    <br><b> Ho Chi Minh city</b>
+                    <br> <font color="#0f0"> At Tommy's house</font>
+                </div>
+            </div>
+
+            <div data-src="pics/August2017_2/IMG_45742.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 23, 2017</i>
+                    <br><b> Ho Chi Minh city</b>
+                    <br> <font color="#0f0"> At Vườn Đá coffee, close to Tommy's house.</font>
+                </div>
+            </div> 
+            
+            <div data-src="pics/August2017_3/IMG_4617.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 26, 2017</i>
+                    <br><b> Dien Chau, Nghe An</b>
+                    <br> <font color="#0f0"> We came back Ngan's hometown for the Vietnam independent holidays</font>
+                </div>
+            </div> 
+            <div data-src="pics/August2017_4/IMG_3911.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 28, 2017</i>
+                    <br><b> Dien Chau, Nghe An</b>
+                    <br> <font color="#0f0"> Soccer tournament at Ngan's village, her brother is in the yellow (Hamlet 6) team</font>
+                </div>
+            </div> 
+
+            <div data-src="pics/August2017_4/IMG_4634.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 28, 2017</i>
+                    <br><b> Dien Chau, Nghe An</b>
+                    <br> <font color="#0f0"> At Dien Hai beach with Ngan's family</font>
+                </div>
+            </div> 
+
+            <div data-src="pics/August2017_4/IMG_3927a.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>August 31, 2017</i>
+                    <br><b> Dien Chau, Nghe An</b>
+                    <br> <font color="#0f0"> At Ngan's aunt hair salon</font>
+                </div>
+            </div> 
+
+             <div data-src="pics/August2017_4/IMG_4689.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>September 1, 2017</i>
+                    <br><b> Dien Chau, Nghe An</b>
+                    <br> <font color="#0f0"> The festival night before September 2</font>
+                </div>
+            </div> 
+
+             <div data-src="pics/August2017_4/IMG_4698.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>September 2, 2017</i>
+                    <br><b> Dien Chau, Nghe An</b>
+                    <br> <font color="#0f0"> Vietnam independent day </font>
+                </div>
+            </div> 
+
+             <div data-src="pics/August2017_4/IMG_4712.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>September 2, 2017</i>
+                    <br><b> Dien Chau, Nghe An</b>
+                    <br> <font color="#0f0"> Vietnam independent day </font>
+                </div>
+            </div> 
+
+            <div data-src="pics/Sep2017_1/IMG_4747.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>September 3, 2017</i>
+                    <br><b> Dien Chau, Nghe An</b>
+                    <br> <font color="#0f0"> Karaoke with Ngan's big family </font>
+                </div>
+            </div> 
+
+             <div data-src="pics/Sep2017_1/IMG_4775.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>September 4, 2017</i>
+                    <br><b> Dien Chau, Nghe An</b>
+                    <br> <font color="#0f0"> Gym time</font>
+                </div>
+            </div> 
+
+            <div data-src="pics/Sep2017_1/IMG_4785.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>September 4, 2017</i>
+                    <br><b> Dien Chau, Nghe An</b>
+                    <br> <font color="#0f0"> 17th-year death anniversary of Ngan's grandmother </font>
+                </div>
+            </div> 
+
+            <div data-src="pics/Sep2017_2/IMG_4804.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>September 6, 2017</i>
+                    <br><b> Thai Binh city</b>
+                    <br> <font color="#0f0"> We traveled North, stoping at Thai Binh museum</font>
+                </div>
+            </div> 
+
+            <div data-src="pics/Sep2017_2/IMG_3970.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>September 7, 2017</i>
+                    <br><b> Hai Phong city</b>
+                    <br> <font color="#0f0"> Stoping at Tân Vũ Lạc Huyện bridge</font>
+                </div>
+            </div> 
+
+            <div data-src="pics/Sep2017_2/IMG_4828.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>September 7, 2017</i>
+                    <br><b> Cát Bà</b>, Cát Hải, Hai Phong city
+                    <br> <font color="#0f0"> Cát Cò 1 beach</font>
+                </div>
+            </div> 
+
+            <div data-src="pics/Sep2017_2/IMG_4860.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>September 7, 2017</i>
+                    <br><b> Cát Bà island</b>, Cát Hải, Hai Phong city
+                    <br> <font color="#0f0"> Cát Cò 3 beach</font>
+                </div>
+            </div> 
+
+            <div data-src="pics/Sep2017_3_HaiPhong/IMG_4926.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>September 8, 2017</i>
+                    <br><b> Cát Bà island</b>, Cát Hải, Hai Phong city
+                    <br> <font color="#0f0"> In Lan Hạ bay </font>
+                </div>
+            </div> 
+
+             <div data-src="pics/Sep2017_3_HaiPhong/IMG_4946.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>September 8, 2017</i>
+                    <br><b> Cát Bà island</b>, Cát Hải, Hai Phong city
+                    <br> <font color="#0f0"> In Lan Hạ bay </font>
+                </div>
+            </div>  
+
+             <div data-src="pics/Sep2017_3_HaiPhong/IMG_4963.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>September 8, 2017</i>
+                    <br><b> Hạ Long bay </b>
+                    <br> <font color="#0f0"> Travel from Lan Hạ to Hạ Long bay </font>
+                </div>
+            </div>
+
+            <div data-src="pics/Sep2017_3_HaiPhong/IMG_5045.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>September 8, 2017</i>
+                    <br><b> Hạ Long bay </b>
+                    <br> <font color="#0f0"> Coming back Lan Hạ bay</font>
+                </div>
+            </div> 
+      
+              
+            <div data-src="pics/Sep2017_4/IMG_5082.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>September 9, 2017</i>
+                    <br><b> Hai Phong city<b>
+                    <br> <font color="#0f0"> Game of Hai Phong vs Binh Duong F.C. Vleague 2017 at Lach Tray stadium</font> 
+                </div>
+            </div> 
+          
+          <!--
+            <div data-src="pics/Sep2017_4/IMG_5135.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>September 18, 2017</i>
+                    <br><b> Hạ Long bay </b>
+                    <br> <font color="#0f0"> </font>
+                </div>
+            </div>
+                
+            <div data-src="pics/Sep2017_4/IMG_5118.JPG">
+                <div class="camera_caption fadeFromBottom">
+                    <i>September 10, 2017</i>
+                    <br><b> Ho Chi Minh city<b>
+                    <br> <font color="#0f0"> Game of Sai Gon vs Thanh Hoa F.C. Vleague 2017 </font> 
+                </div> 
+            </div>-->
+ 
+        </div><!-- #camera_wrap_3 -->
+    </div><!-- .fluid_container -->
+    <!-- <div style="clear:both; display:block; height:100px"></div> -->
+</body> 
+</html>
